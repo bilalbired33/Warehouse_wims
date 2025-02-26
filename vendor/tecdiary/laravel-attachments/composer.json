@@ -1,0 +1,44 @@
+{
+  "name": "tecdiary/laravel-attachments",
+  "description": "Attach files to your models, retrievable by key, group name or using the Eloquent relationship.",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "B&B Web Expertise",
+      "email": "support@bnb.re"
+    },
+    {
+      "name": "Mian Saleem",
+      "email": "saleem@tecdiary.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.2",
+    "illuminate/database": ">=8.37",
+    "illuminate/routing": ">=8.37",
+    "illuminate/support": ">=8.37",
+    "illuminate/console": ">=8.37",
+    "illuminate/encryption": ">=8.37",
+    "bnbwebexpertise/php-uuid": ">=0.0.2",
+    "doctrine/dbal": "^3.0",
+    "nesbot/carbon": "^1.20 || ^2.0"
+  },
+  "require-dev": {
+    "laravel/framework": ">=8.37"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Tecdiary\\Laravel\\Attachments\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tecdiary\\Laravel\\Attachments\\AttachmentsServiceProvider"
+      ]
+    }
+  }
+}

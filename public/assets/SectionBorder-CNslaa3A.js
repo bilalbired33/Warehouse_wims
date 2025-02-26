@@ -1,0 +1,1 @@
+import{_ as o,o as r,c,a as s}from"./app-PFKfXWEI.js";const t={},a={class:"hidden sm:block"};function n(d,e){return r(),c("div",a,e[0]||(e[0]=[s("div",{class:"py-8"},[s("div",{class:"border-t border-gray-200"})],-1)]))}const _=o(t,[["render",n]]);export{_ as T};

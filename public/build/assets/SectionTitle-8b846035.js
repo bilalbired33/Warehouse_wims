@@ -1,0 +1,1 @@
+import{_ as o,o as c,c as a,a as e,f as s}from"./app-32ed258c.js";const n={},r={class:"px-4 md:px-0 md:col-span-1"},l={class:"text-lg font-bold text-gray-900"},_={class:"mt-1 text-gray-600"};function d(t,i){return c(),a("div",r,[e("h3",l,[s(t.$slots,"title")]),e("p",_,[s(t.$slots,"description")])])}const f=o(n,[["render",d]]);export{f as T};

@@ -1,0 +1,292 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  min-width: 340px;
+}
+body,
+#app {
+  @apply w-full min-h-screen m-0 p-0;
+}
+
+::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track:hover,
+.scroll::-webkit-scrollbar-track:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb:hover,
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.ondark::-webkit-scrollbar-track,
+.ondark.scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ondark::-webkit-scrollbar-track:hover,
+.ondark.scroll::-webkit-scrollbar-track:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.ondark::-webkit-scrollbar-thumb,
+.ondark.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ondark::-webkit-scrollbar-thumb:hover,
+.ondark.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.pt {
+  padding-top: 55px;
+}
+@media (max-width: 767px) {
+  .pt {
+    padding-top: 0;
+  }
+}
+.logo {
+  display: block;
+  max-width: 400px;
+  max-height: 100px;
+}
+.logo img,
+.logo svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.w-px {
+  max-width: 50px;
+}
+.min-w-56 {
+  min-width: 14rem;
+}
+.border-darker {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.bottom-100 {
+  bottom: 100%;
+}
+.error {
+  background-color: #fee2e2 !important;
+}
+tr.error td {
+  border-color: #fca5a5 !important;
+  background-color: #fee2e2 !important;
+}
+.vue-highcharts {
+  width: 100%;
+}
+
+.btn-spinner,
+.btn-spinner:after {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+.btn-spinner {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid white;
+  border-right: 0.2em solid white;
+  border-bottom: 0.2em solid white;
+  border-left: 0.2em solid transparent;
+  transform: translateZ(0);
+  animation: spinning 1s infinite linear;
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.1s ease;
+}
+.fade-leave-to,
+.fade-enter-from {
+  opacity: 0;
+}
+
+.slidedown-enter-active,
+.slidedown-leave-active {
+  transform-origin: top;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, max-height 0.2s ease-out;
+}
+.slidedown-enter-to,
+.slidedown-leave-from {
+  opacity: 1;
+  overflow: hidden;
+  max-height: 1000px;
+  transform: scaleY(1);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, max-height 0.1s ease-out;
+}
+.slidedown-enter-from,
+.slidedown-leave-to {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+}
+
+.slide-fade-enter-active {
+  @apply transition origin-top ease-out duration-100;
+}
+.slide-fade-leave-to,
+.slide-fade-enter-from {
+  @apply transform opacity-0 -translate-y-40 scale-95;
+}
+.slide-fade-enter-to,
+.slide-fade-leave-from {
+  @apply transform opacity-100 scale-100;
+}
+.slide-fade-leave-active {
+  @apply transition origin-top ease-in duration-75;
+}
+
+/* nprogress styles */
+/* Make clicks pass-through */
+#nprogress,
+.nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar,
+.nprogress .bar {
+  background: #2563eb;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg,
+.nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #2563eb, 0 0 5px #2563eb;
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner,
+.nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 4.25rem;
+  right: 0.75rem;
+}
+.spinner-normal #nprogress .spinner,
+.spinner-normal .nprogress .spinner {
+  top: 1rem;
+}
+.spinner-center #nprogress .spinner,
+.spinner-center .nprogress .spinner {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  margin-top: -9px;
+  margin-left: -9px;
+  position: absolute;
+}
+
+#nprogress .spinner-icon,
+.nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #2563eb;
+  border-left-color: #2563eb;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent .nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar,
+.nprogress-custom-parent .nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media print {
+  body {
+    height: 100% !important;
+    overflow: visible !important;
+  }
+  * {
+    box-shadow: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+    background-color: #fff !important;
+  }
+  .truncate,
+  .line-clamp-2,
+  .line-clamp-3,
+  .line-clamp-4 {
+    overflow: hidden !important;
+  }
+  .mt-auto {
+    margin-top: 0 !important;
+  }
+  .avoid,
+  table td,
+  table th {
+    page-break-inside: avoid;
+  }
+}

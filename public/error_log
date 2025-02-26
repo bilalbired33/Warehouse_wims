@@ -1,0 +1,1 @@
+[24-Feb-2025 10:50:42 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.31. in /home/operkbvk/wims/vendor/composer/platform_check.php on line 24
