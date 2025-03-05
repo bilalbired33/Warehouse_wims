@@ -27,6 +27,7 @@
         <div class="flex flex-col gap-6">
           <div class="flex flex-col lg:flex-row gap-6">
             <div class="flex flex-col gap-6 w-full lg:w-1/2">
+          
               <text-input v-model="form.name" :error="$page.props.errors.name" :label="$t('Name')" />
               <text-input v-model="form.code" :error="$page.props.errors.code" :label="$t('Code')" />
               <auto-complete

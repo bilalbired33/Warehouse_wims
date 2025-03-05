@@ -1,0 +1,8 @@
+Initialize Git: git init
+Add all project files: git add .
+Commit changes: git commit -m "Initial commit"
+
+Link your local project to the GitHub repo: git remote add origin https://github.com/bilalbired33/Warehouse_wims.git
+Verify the remote link: git remote -v
+Set the default branch to main: git branch -M main
+Push your project to GitHub: git push -u origin main
